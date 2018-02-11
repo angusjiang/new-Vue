@@ -21,7 +21,6 @@ class Observer {
             enumberable: true,
             configurable: true,
             get() {
-                console.log(that.vm.subQueue.target)
                 if (that.vm.subQueue.target) { // 初始化时,把订阅者添加进队列
                     if (that.vm.subQueue.subs.some( sub => sub === that.vm.subQueue.target)) return val
                     that.vm.subQueue.addSub(that.vm.subQueue.target)

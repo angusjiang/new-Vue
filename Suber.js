@@ -18,7 +18,6 @@ class Suber {
     }
 
     update () {
-
         let value = this.getAttrVal(this.attr)
         if (value !== this.value) {
             this.cb && this.cb(value)
